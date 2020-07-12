@@ -2,9 +2,11 @@ import { IActionInputs } from './types';
 import * as core from '@actions/core';
 
 export const getInputs = (): IActionInputs => {
-  const JIRA_TOKEN: string = core.getInput('jira-token', { required: true });
-  const JIRA_BASE_URL: string = core.getInput('jira-base-url', { required: true });
-  const GITHUB_TOKEN: string = core.getInput('github-token', { required: true });
+  const JIRA_TOKEN: string = core.getInput('jira-token');
+  const JIRA_BASE_URL: string = core.getInput('jira-base-url');
+  const GITHUB_TOKEN: string = core.getInput('github-token');
+  const LOL: string = core.getInput('extra');
+  console.log(444, LOL);
   const BRANCH_IGNORE_PATTERN: string = core.getInput('skip-branches', { required: false }) || '';
   const CUSTOM_ISSUE_NUMBER_REGEXP = core.getInput('custom-issue-number-regexp', { required: false });
   const JIRA_PROJECT_KEY = core.getInput('jira-project-key', { required: false });

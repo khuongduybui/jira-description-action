@@ -2,7 +2,7 @@ name: "test -> build -> update lib if needed"
 on:
   push:
     branches:
-      - '**'
+      - '!test'
     tags:
       - '!**'
 jobs:
