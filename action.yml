@@ -2,7 +2,7 @@ name: 'jira-description'
 description: 'Add JIRA issue details to your GitHub pull request.'
 author: 'cakeinpanic'
 inputs:
-  github-token:
+  extra:
     description: 'Token used to update PR description and add labels. Can be passed in using {{ secrets.GITHUB_TOKEN }}'
     required: true
   jira-token:
